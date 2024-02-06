@@ -6,6 +6,7 @@ public class saldo {
     JPanel ventanaSaldo;
     private JButton Button;
     private JLabel saldoLabel;
+    private JTextField textField1;
 
     // Variable para almacenar el saldo actual
     private static double saldo = 200; // Ejemplo: Saldo inicial de 200 dólares
