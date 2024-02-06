@@ -47,6 +47,30 @@ public class retiro {
         button11.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                try {
+                    // Obtener el monto del textField1 y restarlo al saldo actual
+                    double monto = Double.parseDouble(textField1.getText());
+
+                    double nuevoSaldo = saldo.getSaldo() - monto;
+                    // Validar si el monto es mayor que el saldo
+                    if (monto > saldo.getSaldo()) {
+                        JOptionPane.showMessageDialog(ventanaRetiro, "Fondos insuficientes");
+                        textField1.setText("");
+                    } else {
+//                      Llamar al método realizarRetiro de form2
+//                      menu.realizarRetiro(monto);
+                        // Llamar al método actualizarSaldo de form3
+                        saldo form3Instance = new saldo();
+                        form3Instance.actualizarSaldo(form3Instance.getSaldo() - monto);
+                        JOptionPane.showMessageDialog(ventanaRetiro, "Retiro exitoso. Saldo actualizado: $" + form3Instance.getSaldo());
+                        textField1.setText("");
+                    }
+
+                } catch (NumberFormatException ex) {
+                    // Manejar la excepción (entrada no válida)
+                    JOptionPane.showMessageDialog(null, "Ingrese un monto válido.");
+                    textField1.setText("");
+                }
 
             }
         });

@@ -51,6 +51,8 @@ public class login {
                     if (!password.equals("1234")) {
                         throw new IllegalArgumentException("Contraseña incorrecta");
                     }
+                    // Si no hay excepción, significa que la contraseña es correcta
+                    JOptionPane.showMessageDialog(ventanaLogin, "Contraseña correcta ");
                     JFrame menu = new JFrame("Transacción a Realizar");
                     menu.setUndecorated(true);
                     menu.setContentPane(new menu().ventanaMenu);

@@ -13,6 +13,7 @@ public class menu {
         RadioButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(ventanaMenu, "Dirigiendose a la pantalla..");
                 JFrame saldo = new JFrame("Saldo");
                 saldo.setUndecorated(true);
                 saldo.setContentPane(new saldo().ventanaSaldo);
@@ -26,6 +27,8 @@ public class menu {
         RadioButton2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Mensaje de confirmacion
+                JOptionPane.showMessageDialog(ventanaMenu, "Dirigiendose a la pantalla..");
                 JFrame retiro = new JFrame("Retiro");
                 retiro.setUndecorated(true);
                 retiro.setContentPane(new retiro().ventanaRetiro);
@@ -39,6 +42,7 @@ public class menu {
         RadioButton3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(ventanaMenu, "Dirigiendose a la pantalla..");
                 JFrame deposito = new JFrame("Depósito");
                 deposito.setUndecorated(true);
                 deposito.setContentPane(new deposito().ventanaDeposito);
@@ -52,11 +56,11 @@ public class menu {
         RadioButton4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame salir = new JFrame("Muchas gracias");
+                JFrame salir = new JFrame("Muchas gracias..!");
                 salir.setContentPane(new salir().ventanaSalir);
                 salir.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 salir.pack();
-                salir.setSize(400,400);
+                salir.setSize(250,300);
                 salir.setVisible(true);
                 ((JFrame) SwingUtilities.getWindowAncestor(RadioButton1)).dispose();
             }
