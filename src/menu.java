@@ -14,6 +14,7 @@ public class menu {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame saldo = new JFrame("Saldo");
+                saldo.setUndecorated(true);
                 saldo.setContentPane(new saldo().ventanaSaldo);
                 saldo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 saldo.pack();
@@ -26,6 +27,7 @@ public class menu {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame retiro = new JFrame("Retiro");
+                retiro.setUndecorated(true);
                 retiro.setContentPane(new retiro().ventanaRetiro);
                 retiro.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 retiro.pack();
@@ -38,6 +40,7 @@ public class menu {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame deposito = new JFrame("Depósito");
+                deposito.setUndecorated(true);
                 deposito.setContentPane(new deposito().ventanaDeposito);
                 deposito.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 deposito.pack();

@@ -52,6 +52,7 @@ public class login {
                         throw new IllegalArgumentException("Contraseña incorrecta");
                     }
                     JFrame menu = new JFrame("Transacción a Realizar");
+                    menu.setUndecorated(true);
                     menu.setContentPane(new menu().ventanaMenu);
                     menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                     menu.pack();
